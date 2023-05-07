@@ -1,0 +1,224 @@
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+i {
+  font-size: 30px;
+}
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 28rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  font-family: "PT Sans", serif;
+  font-size: 3.25rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  line-height: 1.75;
+  font-size: 15px;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    left:   1rem;
+  }
+  .sidebar-sticky-bottom {
+    position: absolute;
+    right:  1rem;
+    left:   1rem;
+    bottom: 2rem;
+  }
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  margin-top:    5rem;
+  padding-bottom: 4rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 48em) {
+  .content {
+    position: fixed;
+    max-width: 38rem;
+    margin-left: 28rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-right: 4rem;
+  }
+}
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` on the right.
+ */
+
+@media (min-width: 48em) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 20rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content {
+    margin-left: 4rem;
+    margin-right: 22rem;
+  }
+}
+
+.theme-base .sidebar {
+  background-color: #5994c5;
+}
+.theme-base .content a,
+.theme-base .related-posts li a:hover {
+  color: #5994c5;
+}
+
+.tippy-box[data-theme~='ay'] {
+  color: #e7effd;
+  background-color: #5994c5;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 6px;
+  box-shadow: 0 2px 4px 0 rgba(99, 100, 100, 0.397);
+}
+
+.tippy-tooltip.ay-theme[data-animatefill] {
+    background-color: transparent;
+}
+
+.tippy-tooltip.ay-theme .tippy-backdrop {
+    background-color: #fff;
+}
+
+.tippy-tooltip.ay-theme .tippy-roundarrow {
+    fill: #fff;
+}
+
+.line-1{
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1.5s steps(44) 1s 1 normal both,
+             blinkTextCursor 1000ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+  from {width: 0;}
+  to {width: 10rem;}
+}
+
+@keyframes blinkTextCursor{
+  from {border-right-color: rgba(255,255,255,.75);}
+  to {border-right-color: transparent;}
+}
+
+.social {
+  margin-bottom: 30px;
+}
