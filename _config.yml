@@ -1,5 +1,6 @@
-source              : ./build
-destination         : ./template
+# Configuration for static files
+assets_dir:       ./assets
+destination:      ./build
 
 # Setup
 title:            ayalava2
@@ -7,6 +8,3 @@ tagline:          ''
 description:      ''
 url:              arvindyalavarti.com
 baseurl:          /
-
-plugins:
-  - jekyll-environment-variables

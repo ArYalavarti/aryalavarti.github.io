@@ -17,7 +17,7 @@ title: Home
             <i class="fa-brands fa-github"></i>
         </div>
         <div class="media">
-             <a href="https://github.com/ArYalavarti/">@ArYalavarti</a>
+             <a href="https://github.com/ayalavarti/">@ayalavarti</a>
         </div>
     </div>
     <div class="social">
@@ -25,15 +25,7 @@ title: Home
             <i class="fas fa-university"></i>
         </div>
         <div class="media">
-             <img src="static/images/brown.png" width="100px" />
-        </div>
-    </div>
-    <div class="social">
-        <div class="icons">
-            <i class="fa-solid fa-briefcase"></i>
-        </div>
-        <div class="media">
-             <img src="static/images/palantir-2.png" width="100px"/>
+             <img src="{{ site.assets_dir }}/images/brown.png" width="100px" />
         </div>
     </div>
 </div>
